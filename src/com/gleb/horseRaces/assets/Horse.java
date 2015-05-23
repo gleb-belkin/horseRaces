@@ -3,13 +3,10 @@ package com.gleb.horseRaces.assets;
 import java.util.Random;
 
 /**
- * Created by Gleb Belkin (gleb.belkin@outlook.com) on 20.05.2015.
+ * Author: Gleb Belkin (gleb.belkin@outlook.com).
  */
 public class Horse {
-    private final int averageSpeed = 60;
     private final String name;
-
-
     private final int minSpeed;
     private final int maxSpeed;
     private float timeCompletedHours = 0;
@@ -19,6 +16,7 @@ public class Horse {
 
     public Horse(String name) {
         this.name = name;
+        int averageSpeed = 60;
         minSpeed = averageSpeed - rnd.nextInt(5);
         maxSpeed = averageSpeed + rnd.nextInt(5);
     }
@@ -36,7 +34,6 @@ public class Horse {
     public float getDistanceCovered() {
         return distanceCovered;
     }
-
 
     public String getName() {
         return name;
